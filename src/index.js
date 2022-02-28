@@ -36,26 +36,3 @@ for (let i = 0; i <= Math.max(...indexArr); i += 1) {
 }
 
 container.innerHTML = taskList;
-
-if (taskBox.length > 0) {
-  for (let i = 0; i < taskBox.length; i += 1) {
-    taskBox[i].addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') {
-        event.preventDefault();
-        taskList.updateTask(taskBox[i], i);
-        document.location.reload(true);
-        ToDo.displayTask();
-      }
-    });
-  }
-}
-
-// for (let i = 0; i < deleteIcon.length; i +=1) {
-//   deleteIcon[i].parentElement.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     deleteIcon[i].style.display = ('block')
-//     toHide[i].style.display = ('none')
-//   })
-    
-// }
-
